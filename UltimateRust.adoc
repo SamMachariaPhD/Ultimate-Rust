@@ -1,0 +1,18 @@
+= Rust Fundamentals
+Notes by Sam Macharia, learning from Nathan Stocks et al.
+:toc: auto
+
+== Introduction 
+
+* Fundamentals are important in rust.
+* System programming language.
+* Good for `Safety`, `Concurrency`, and `Speed`.
+
+[quote, Wikipedia, https://en.wikipedia.org/wiki/Concurrency_(computer_science)]
+In computer science, #concurrency# is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome.
+
+* `Python` can give you safety but not concurrency or speed.
+* `C/C++` will give you speed and some concurrency but not safety.
+
+https://github.com/CleanCut/ultimate_rust_crash_course [Github repo for exercises]
+
