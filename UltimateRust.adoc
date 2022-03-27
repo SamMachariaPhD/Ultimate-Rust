@@ -33,3 +33,40 @@ hello
 [quote, Wikipedia TOML, https://en.wikipedia.org/wiki/TOML]
 The name "TOML" is an acronym for "Tom's Obvious, Minimal Language" referring to its creator, Tom Preston-Werner.
 TOML is a file format for configuration files. It is intended to be easy to read and write due to obvious semantics which aim to be "minimal", and is designed to map unambiguously to a dictionary. Its specification is open-source, and receives community contributions.
+
+* Build and run your project by running `$ cargo run` within the `<...>.rs` folder. Results stored in `target/debug/hello`.
+
+* It's a lot faster to compile* without debug: `$ cargo run --release`. Results stored in `target/release/hello`
+
+== Variables 
+
+* They start with `let`:
+
+[source, rust]
+----
+fn main() {
+    let bunnies = 2;
+}
+----
+
+Assigning the type. e.g. 32 bit integer:
+
+[source, rust]
+----
+fn main() {
+    let bunnies: i32 = 4;
+}
+----
+
+Initializing multiple statements at once: 
+
+[source, rust]
+----
+fn main() {
+    let (bunnies, carrots) = (2, 4);
+}
+----
+
+* For safety, concurrency, and speed, Rust variables are immutable by default. Unless you chose to make them mutable so that you may change their values later. 
+Data that never changes can be shared between multiple threads without loss [pass:q[<u>safety</u>]]. Compiler can do extra optimization on data it knows wont change [pass:q[<u>concurrency</u>]]. Run time can be improved by working with unchanging data [pass:q[<u>speed</u>]].
+
