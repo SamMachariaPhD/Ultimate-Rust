@@ -70,3 +70,15 @@ fn main() {
 * For safety, concurrency, and speed, Rust variables are immutable by default. Unless you chose to make them mutable so that you may change their values later. 
 Data that never changes can be shared between multiple threads without loss [pass:q[<u>safety</u>]]. Compiler can do extra optimization on data it knows wont change [pass:q[<u>concurrency</u>]]. Run time can be improved by working with unchanging data [pass:q[<u>speed</u>]].
 
+* To make the value of a variable mutable, add a key word `mut` e.g. 
+[source, rust]
+----
+fn main() {
+    let mut bunnies = 2;
+    bunnies = 3;
+}
+----
+
+* If you try to change the value of `bunnies` without making it mutable, you will get an error. Rust error messages are very relevant and helpful. Take time to read through an error message.
+
+* Constants `const` are immutable and stay that way. They are usually in caps aka snake case e.g. `CONST_COEFF`.
