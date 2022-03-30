@@ -81,4 +81,24 @@ fn main() {
 
 * If you try to change the value of `bunnies` without making it mutable, you will get an error. Rust error messages are very relevant and helpful. Take time to read through an error message.
 
-* Constants `const` are immutable and stay that way. They are usually in caps aka snake case e.g. `CONST_COEFF`.
+* Constants `const` are immutable and stay that way. They are usually in caps aka snake case e.g. `CONST_COEFF`. The type anotation is required e.g. `f64`.  The value must be constant expression that can be determined at compile time. e.g. 
+[source, rust]
+----
+fn main() {
+    const BUNNY_FACT: f64 = 4.2;
+}
+----
+
+* You can place a cont outside a function and use it anywhere you want (global). This is good practice for speed.
+
+== Scope 
+
+* Variables have a scope. This is a place in the code within which they are accessible for use. 
+* Variables are accessible within the blocks `{}` they were created in, or everywhere if they were created outside a function braces `{}`.
+* Variables can be shadowed. You can have the same name with different initialization variables but in different scopes. e.g.
+[source, rust]
+----
+fn main() {
+    const BUNNY_FACT: f64 = 4.2;
+}
+----
