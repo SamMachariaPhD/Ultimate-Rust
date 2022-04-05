@@ -94,11 +94,25 @@ fn main() {
 == Scope 
 
 * Variables have a scope. This is a place in the code within which they are accessible for use. 
-* Variables are accessible within the blocks `{}` they were created in, or everywhere if they were created outside a function braces `{}`.
-* Variables can be shadowed. You can have the same name with different initialization variables but in different scopes. e.g.
+* Variables are accessible within the blocks `{}` they were created in, or everywhere if they were created outside the function braces `{}`.
+* Variables can be #shadowed#. You can have the same name with different initialization variables but in different scopes. e.g.
 [source, rust]
 ----
 fn main() {
-    const BUNNY_FACT: f64 = 4.2;
+    let bunnies = 2;
+    {
+        let bunnies = 4;
+        println!("{}",bunnies); // prints: 4
+    }
+    println!("{}",bunnies); // prints: 2
 }
 ----
+* Variables can also be shadowed in the same scope. 
+[source, rust]
+----
+fn main(){
+    let mut bunnies = 4; // mutable
+    let bunnies = bunnies; // now immutable
+}
+----
+* Variables can also be shadowed to another type. Say from string to image. 
