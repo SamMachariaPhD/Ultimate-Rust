@@ -116,3 +116,40 @@ fn main(){
 }
 ----
 * Variables can also be shadowed to another type. Say from string to image. 
+
+== Memory Safety
+
+* Variables must be initialized before use. If you want to initialize on condition, the compiler must be sure that the variable will be initialized at some point. e.g. 
+* Here, the compiler is not sure that `bunny` will ever be `true`. This program won't compile.
+[source, rust]
+----
+fn main(){
+    let bunny: i32;
+    if true{
+        bunny = 3;
+    }
+    println!("{}", bunny);
+}
+----
+* Here, the program will be compiled because `bunny` will be initialized regardless.
+[source, rust]
+----
+fn main(){
+    let bunny: i32;
+    if true{
+        bunny = 3;
+    } else{
+        bunny = 4;
+    }
+    println!("{}", bunny);
+}
+----
+* `C` programming would go on to compile.
+[source, c]
+----
+#include <stdio.h>
+int main(){
+    int bunny;
+    printf("%d\n", bunny);
+}
+----
