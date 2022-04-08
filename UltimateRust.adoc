@@ -155,3 +155,27 @@ int main(){
 ----
 
 == Functions 
+* Functions are defined using the `fn` key word.
+[source, rust]
+----
+fn do_sth(){
+    sth;
+}
+----
+* Type may be included in the function definition. The arrow `->` specifies the return type.
+[sourc, rust]
+----
+fn do_sth(bunny1: f64, carrot: i64) -> f64 {
+    return bunny1*carrot;
+}
+----
+* A return in a function can be done without `return` key word or semicolon `;` - __tail expression__.
+[sourc, rust]
+----
+fn do_sth(bunny1: f64, carrot: i64) -> f64 {
+    bunny1*carrot
+}
+----
+* Different types for the same argument are not supported.
+
+== Module System
