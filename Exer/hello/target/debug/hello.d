@@ -1,1 +1,1 @@
-/home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/hello/target/debug/hello: /home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/hello/src/main.rs
+/home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/hello/target/debug/hello: /home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/hello/src/lib.rs /home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/hello/src/main.rs

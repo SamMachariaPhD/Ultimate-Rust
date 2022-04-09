@@ -71,6 +71,7 @@ fn main() {
 Data that never changes can be shared between multiple threads without loss [pass:q[<u>safety</u>]]. Compiler can do extra optimization on data it knows wont change [pass:q[<u>concurrency</u>]]. Run time can be improved by working with unchanging data [pass:q[<u>speed</u>]].
 
 * To make the value of a variable mutable, add a key word `mut` e.g. 
+
 [source, rust]
 ----
 fn main() {
@@ -82,6 +83,7 @@ fn main() {
 * If you try to change the value of `bunnies` without making it mutable, you will get an error. Rust error messages are very relevant and helpful. Take time to read through an error message.
 
 * Constants `const` are immutable and stay that way. They are usually in caps aka snake case e.g. `CONST_COEFF`. The type anotation is required e.g. `f64`.  The value must be constant expression that can be determined at compile time. e.g. 
+
 [source, rust]
 ----
 fn main() {
@@ -96,6 +98,7 @@ fn main() {
 * Variables have a scope. This is a place in the code within which they are accessible for use. 
 * Variables are accessible within the blocks `{}` they were created in, or everywhere if they were created outside the function braces `{}`.
 * Variables can be #shadowed#. You can have the same name with different initialization variables but in different scopes. e.g.
+
 [source, rust]
 ----
 fn main() {
@@ -108,6 +111,7 @@ fn main() {
 }
 ----
 * Variables can also be shadowed in the same scope. 
+
 [source, rust]
 ----
 fn main(){
@@ -121,6 +125,7 @@ fn main(){
 
 * Variables must be initialized before use. If you want to initialize on condition, the compiler must be sure that the variable will be initialized at some point. e.g. 
 * Here, the compiler is not sure that `bunny` will ever be `true`. This program won't compile.
+
 [source, rust]
 ----
 fn main(){
@@ -132,6 +137,7 @@ fn main(){
 }
 ----
 * Here, the program will be compiled because `bunny` will be initialized regardless.
+
 [source, rust]
 ----
 fn main(){
@@ -145,6 +151,7 @@ fn main(){
 }
 ----
 * `C` programming would go on to compile.
+
 [source, c]
 ----
 #include <stdio.h>
@@ -156,6 +163,7 @@ int main(){
 
 == Functions 
 * Functions are defined using the `fn` key word.
+
 [source, rust]
 ----
 fn do_sth(){
@@ -163,19 +171,60 @@ fn do_sth(){
 }
 ----
 * Type may be included in the function definition. The arrow `->` specifies the return type.
-[sourc, rust]
+
+[source, rust]
 ----
 fn do_sth(bunny1: f64, carrot: i64) -> f64 {
     return bunny1*carrot;
 }
 ----
 * A return in a function can be done without `return` key word or semicolon `;` - __tail expression__.
-[sourc, rust]
+
+[source, rust]
 ----
 fn do_sth(bunny1: f64, carrot: i64) -> f64 {
     bunny1*carrot
 }
 ----
+
 * Different types for the same argument are not supported.
 
 == Module System
+
+* You can put functions in a different file, say, `lib.rs` and call them into `main.rs` using the key word `use::`.
+
+[source, rust]
+----
+// lib.rs in "hello/src" directory
+pub fn greet(){ // pub makes this function public
+    println!("Hello Sam!");
+}
+----
+[source, rust]
+----
+// main.rs in "hello/src" directory
+use hello::greet; // similar to 'import' in Python
+
+fn main(){
+    greet(); // you could say "hello::greet();" without "use" 
+}
+----
+
+:stdlib: https://doc.rust-lang.org/std/
+:crates: https://crates.io/crates/rand
+* Rust standard library `std` is very useful e.g. `use std::collections::HashMap`. Check {stdlib}[the documentation].
+
+* If you need something that is not in the `std` lib, say random, you can add it by getting its name from menu:Crates[random package] {crates}[crates' random package] and then write its name in the `Cargo.toml` under dependencies. e.g. `rand =
+"0.8.5"`. You can then generate random numbers.
+
+[source, rust]
+----
+use rand::Rng;
+
+fn main() {
+    let mut rnd_no = rand::thread_rng();
+    println!("Random number\t {}", rnd_no.gen_range(10..100));
+}
+----
+
+
