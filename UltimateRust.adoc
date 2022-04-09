@@ -227,4 +227,35 @@ fn main() {
 }
 ----
 
+== Scalar Types 
+
+* Integers, floats, booleans, and characters (primitive types in JavaScript*).
+* Unsigned integers starts with `u` followed the number of bits the integer has. e.g. `u16` Except for `usize` which specifies a pointer type. You use `usize` to index turples*. Signed integers, `i`, are the same except they use `i`.
+* If you don't specify the type, it defaults to `i32` since it is generally the fastest even on 64 bit architectures.
+* Not all types are supported by all architectures. A 16 bit microcontroller may not support 64 bit types. 
+* Decimals are usual numbers, hexadecimals begin with `0x...`, Octal begin with `0o...`, binary with `0b...`, and bytes/u8 with `b'..'`. Underscores might be used wherever we like but they are ignored. e.g. `0xbunny = 0x_bunny = 0x_bunny_`.
+* The following three ways to initialize x and y are the same.
+
+[source, rust]
+----
+let x: u16 = 5;
+let y: f32 = 3.14;
+----
+[source, rust]
+----
+let x = 5u16;
+let y = 3.14f32;
+----
+[source, rust]
+----
+let x = 5_u16;
+let y = 3.14_f32;
+----
+* Booleans are lower case `true` or `false`.
+* Character type `char` could represent anything from alphabets, to emoji, to a chinese kanji, ... A character is always 4 bytes (32 bits), a `UCS-4/UTF-32` string. 
+
+[source, rust]
+----
+let letta = 'h';
+----
 
