@@ -1,0 +1,1 @@
+/home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/c_simple_types/target/release/ding_machine: /home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/c_simple_types/src/lib.rs /home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/c_simple_types/src/main.rs
