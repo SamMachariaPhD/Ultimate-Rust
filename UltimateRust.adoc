@@ -1,5 +1,5 @@
 = Rust Fundamentals
-Notes
+Learning Rust Notes
 :toc: auto
 
 == Introduction 
@@ -259,3 +259,45 @@ let y = 3.14_f32;
 let letta = 'h';
 ----
 
+== Compound Types
+:tuple: https://doc.rust-lang.org/std/primitive.tuple.html 
+* Gather multiple values of other types into one type. e.g. {tuple}[#Tuple#] 
+
+[source, rust]
+----
+let info = (1, 3.3. 999);
+----
+[source, rust]
+----
+let info: (u8, f64, i32) = (1, 3.3. 999);
+----
+* To access members of a tuple, you can use the `dot syntax` also known as a __field access expression__.
+
+[source, rust]
+----
+let info = (3, 7.3, 966);
+let bunny1 = info.0;
+let bunny2 = info.2;
+----
+
+* You can also access members of a tuple all at once.
+
+[source, rust]
+----
+let info = (3, 7.3, 966);
+let (bunny1, bunny2, bunny3) = info;
+----
+
+* Tuple may have a limitation of 12 types e.g. 4 types ~ `(u8, u8, i32, u64`
+
+:arrays: https://doc.rust-lang.org/std/primitive.array.html 
+* {arrays}[#Arrays#] store multiple values of the *same* type. 
+
+[source, rust]
+----
+let bunny = [1,2,3]; // specifying literally
+let bunny = [0;3]; // a value and how many you want
+let bunny: [u8;3] = [1,2,3]; // specifying type - use semicolon form
+----
+* Arrays are indexed with square brackets. e.g. `bunny[1] = 2`
+* Arrays are limited to size 32 above which they lose most of their functionality. Arrays live on the stack in a fixed size. You usually use vectors `Vec` or slices of vectors instead of arrays. 
