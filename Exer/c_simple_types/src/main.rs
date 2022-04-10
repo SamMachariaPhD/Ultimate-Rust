@@ -1,10 +1,7 @@
 // Silence some warnings so they don't distract from the exercise.
 #![allow(dead_code, unused_variables)]
 
-use ding_machine::print_difference;
-use ding_machine::print_array;
-use ding_machine::ding;
-use ding_machine::on_off;
+use ding_machine::{print_difference, print_array, ding, on_off, print_distance};
 
 fn main() {
     let coords: (f32, f32) = (6.3, 15.0);
@@ -21,7 +18,7 @@ fn main() {
     // Create an array of type [f32; 2] and initialize it to contain the
     // information from coords.  Uncomment the print_array line and run the code.
     //
-    let coords_arr: [f32;2] = [6.3, 15.0];               // create an array literal out of parts of `coord` here
+    let coords_arr: [f32;2] = [coords.0, coords.1];               // create an array literal out of parts of `coord` here
     print_array(coords_arr);        // and pass it in here (this line doesn't need to change)
 
 
@@ -53,8 +50,9 @@ fn main() {
     // output. Then go refactor the print_distance() function according to the
     // instructions in the comments inside that function.
 
-    // print_distance(coords);
+    print_distance(coords);
 }
 
+// Done. Sam.
 
 

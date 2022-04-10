@@ -191,7 +191,7 @@ fn do_sth(bunny1: f64, carrot: i64) -> f64 {
 
 == Module System
 
-* You can put functions in a different file, say, `lib.rs` and call them into `main.rs` using the key word `use package::function`. The package name is specified in `Cargo.toml` menu:Cargotoml[package > name].
+* You can put functions in a different file, say, `lib.rs` and call them into `main.rs` using the key word `use package::function`. The package name is specified in `Cargo.toml` menu:Cargotoml[package > name]. Package name does not have to be the name of the project.
 
 [source, rust]
 ----
@@ -288,7 +288,7 @@ let info = (3, 7.3, 966);
 let (bunny1, bunny2, bunny3) = info;
 ----
 
-* Tuple may have a limitation of 12 types e.g. 4 types ~ `(u8, u8, i32, u64`
+* Tuple may have a limitation of 12 types e.g. 4 types ~ `(u8, u8, i32, u64)`
 
 :arrays: https://doc.rust-lang.org/std/primitive.array.html 
 * {arrays}[#Arrays#] store multiple values of the *same* type. 
