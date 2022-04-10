@@ -183,7 +183,7 @@ fn do_sth(bunny1: f64, carrot: i64) -> f64 {
 [source, rust]
 ----
 fn do_sth(bunny1: f64, carrot: i64) -> f64 {
-    bunny1*carrot
+    bunny1*carrot // tail expression
 }
 ----
 
@@ -303,4 +303,103 @@ let bunny: [u8;3] = [1,2,3]; // specifying type - use semicolon form
 * Arrays are limited to size 32 above which they lose most of their functionality. Arrays live on the stack in a fixed size. You usually use vectors `Vec` or slices of vectors instead of arrays. 
 
 == Control Flow 
+
+* If expression - returns a value.
+
+[source, rust]
+----
+if num == 5 {
+    msg = "bunnies";
+} else if num == 4 {
+    msg = "bunny";
+} else {
+    msg = "sth";
+}
+----
+* The condition is anything between `if` and `{` and must evaluate to a boolean.
+* Rust doesn't like type coercion.
+
+[quote, Type conversion, https://en.wikipedia.org/wiki/Type_conversion]
+In computer science, type conversion, type casting, type coercion, and type juggling are different ways of changing an expression from one data type to another.
+
+* If statement - don't return a value.
+
+[source, rust]
+----
+msg = if num == 5 {
+    "bunnies"       // same type
+} else if num == 4 {
+    "bunny"
+} else {
+    "sth"
+};                  // only one ';' at the end
+
+// short `if` expression
+num = if a{b} else {c};
+----
+
+* Unconditional `loop {}`
+* Conditional `loop {break;}`
+* To `break` out of a nested loop, first annotate the loop you want to break out of with some label (also called tick identifier), say, `'sth` then tell break which loop you want to break out of. `continue` is similar.
+
+[source, rust]
+----
+'sth: loop{
+    loop {
+        loop{
+            break 'sth; // I want to break out of 'sth
+        }
+    }
+}
+----
+
+* `while` loops 
+
+[source, rust]
+----
+while bunny(){
+    // do sth
+}
+----
+
+[source, rust]
+----
+// similar to while loop
+loop{
+    if !bunny(){break}
+    // do sth
+}
+----
+
+* There is no `do while` in rust but you can make one.
+
+[source, rust]
+----
+loop{
+    // do sth
+    if !bunny(){break}
+}
+----
+
+* Rust `for` loop iterate over any iterable value.
+
+[source, rust]
+----
+for num in [2,5,3].iter(){
+    // do sth
+}
+
+// for loop can take a pattern
+let array = [(1,2), (3,4)];
+for (x,y) in array.iter(){
+    // do sth with x and y
+}
+
+// ranges
+for num in 0..10{
+    // do sth in range 0 to 10. 
+    // It will count 0-9 the end is exclusive. Like Python
+    // To make the end inclusive, use `0..=10`
+}
+----
 
