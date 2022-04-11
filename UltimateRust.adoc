@@ -403,3 +403,18 @@ for num in 0..10{
 }
 ----
 
+== Strings 
+
+* There are at least 6 types of strings in the Rust std lib, but we mostly care about 2 of them. The first string slice `str` is usually used as a borrowed string slice `&str`. A literal string, say, `let msg = "bunny";` is always a borrowed string slice. The other string type is a `String`. 
+* The data in `str` cannot be modified while the data in `String` can.
+* `String` is created by calling the `.to_string()` method on a borrowed string slice: `let msg = "bunny".to_string();` or by passing string slice to `String::from("...")` e.g. `let msg = String::from("bunny");`
+* `&str` is like a subset of `String`
+* Strings cannot be indexed by character position. They may be representing emoji or some other weird character, say, using several bytes. Rust can be used for various applications - not only in English. 
+If you still want to access those bytes, you could use `word.bytes();`, `word.chars();`, or a *unicode-segmentaion* package.
+* There are several helper methods that can be used to manipulate strings. e.g. `.pop()`, `.push()`, `.truncate()`, `.len()`, `.insert()`, `.split()`, `.drain()`, `.trim()`, `.mathches()`, ... You can use iterator `.nth(3)` in place of indexing in iterators. 
+
+
+
+
+
+
