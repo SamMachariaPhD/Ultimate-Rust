@@ -41,7 +41,7 @@ fn sum() {
     // Run it with `cargo run sum`
 
     for num in 7..=23{
-        sum = sum+num;
+        sum += num;
     }
 
     println!("The sum is {}", sum);
@@ -55,8 +55,8 @@ fn double() {
     // with `cargo run double`  Hint: The answer is 9 times.
 
     while x<=500{
-        x=x*2;
-        count+=1;
+        x *= 2;
+        count += 1;
     }
 
     println!("You can double x {} times until x is larger than 500", count);

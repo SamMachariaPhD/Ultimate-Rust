@@ -413,8 +413,40 @@ for num in 0..10{
 If you still want to access those bytes, you could use `word.bytes();`, `word.chars();`, or a *unicode-segmentaion* package.
 * There are several helper methods that can be used to manipulate strings. e.g. `.pop()`, `.push()`, `.truncate()`, `.len()`, `.insert()`, `.split()`, `.drain()`, `.trim()`, `.mathches()`, ... You can use iterator `.nth(3)` in place of indexing in iterators. 
 
+== Ownership 
 
+* Ownership is what makes safety. It differentiates Rust from C/C++. 
+* There are 3 rules to ownership.
+    . *Each value has an owner.* There is no value in memory or data that does not a variable that owns it. 
+    . *There is only one owner of a value.* No variables may share ownership. Other variables may borrow the value but still only one variable owns it.
+    .  *When the owner goes out of scope, the value gets dropped immediately.* 
 
+[source, rust]
+----
+fn main() {
+    let s1 = String::from("bunny");
+    let s2 = s1; // the value of s1 is moved to s2. Not copied!
+    //println!("s1 is\t{}", s1); // error - value of s1 was moved to s2
+    println!("s2 is\t{}", s2);
+}
+----
 
+[cols="1,1"]
+|===
+|*Stack*
+|*Heap*
+
+|In order
+|Unordered
+
+|Fixed-size
+|Variable-size
+
+|LIFO (last value in is the first value out)
+|Unordered
+
+|Fast
+|Slow
+|===
 
 
