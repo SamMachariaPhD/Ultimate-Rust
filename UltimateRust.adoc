@@ -431,6 +431,8 @@ fn main() {
 }
 ----
 
+* Sections of memory. The stack stores values in order, while the heap does't. 
+
 [cols="1,1"]
 |===
 |*Stack*
@@ -449,4 +451,20 @@ fn main() {
 |Slow
 |===
 
+* The value of the string `s1`. The pointer points to the newly allocated bytes in the heap. 
+
+[cols="1,1"]
+|===
+|*Stack*
+|*Heap*
+
+|pointer -> -> -> 
+|a
+
+|length    `[3]`
+|b
+
+|capacity   `[3]`
+|c
+|===
 
