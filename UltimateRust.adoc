@@ -468,3 +468,7 @@ fn main() {
 |c
 |===
 
+* If `s1` were mutable, we could assign some new value. But since it was immutable, it's now just garbage and can't use it anymore. 
+
+* If we actually wanted to make a copy of `s1` to `s2`, use the `.clone()` method: `let s2 = s1.clone();` which updates ownership. 
+
