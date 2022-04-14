@@ -498,3 +498,17 @@ fn do_stuff(s: String) -> String { // add a return type
 
 == Referencing and Borrowing 
 
+* Instead of moving a variable, use a reference. The reference and not the value get moved into the function `do_stuff()`. At the end of the function, the reference goes out of scope, gets dropped, and the borrowing ends at that point. You can use `s1` normally elsewhere because the value never moved.
+
+[source, rust]
+----
+// Solution 2 ~ referencing 
+let s1 = String::from("abc");
+do_stuff(&s1); // Pass a reference to s1 using '&'. s1 retains ownership.
+println!("{}", s1); 
+
+fn do_stuff(s: &String){ // Take a reference to a string using '&'
+    // do stuff          // Borrrows a reference to the value of s1
+}
+----
+
