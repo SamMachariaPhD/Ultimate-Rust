@@ -512,3 +512,18 @@ fn do_stuff(s: &String){ // Take a reference to a string using '&'
 }
 ----
 
+* References must always be valid, referred to as _lifetime_. The compiler won't allow you to make a reference that outlives the data that's being referenced.* You can never point to null. 
+
+* References default to immutable, even if the value being referenced is mutable. But we can make a mutable reference `&mut ` to a mutable value to and then we can change the value using the reference.
+
+[source, rust]
+----
+let mut s1 = String::from("abc"); // mutable 
+do_stuff(&mut s1); // '&mut '
+println!("{}", s1); 
+
+fn do_stuff(s: &mut String){ // '&mut '
+    s.insert_str(0, "Hi, "); // to dereference, use '(*s).insert...'
+    // *s = String::from("Replacement"); // write to or read from the actual value
+}
+----
