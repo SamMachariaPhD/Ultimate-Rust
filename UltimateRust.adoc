@@ -527,3 +527,14 @@ fn do_stuff(s: &mut String){ // '&mut '
     // *s = String::from("Replacement"); // write to or read from the actual value
 }
 ----
+
+* This is *immutable* referece `&x` to the value or the variable `x`, and this `&mut x` is a *mutable* reference. 
+
+* This is the type of *immutable* reference `&i32` and this is the type of the *mutable* reference `&mut i32`.
+
+* If `x: &mut i32` (a mutable reference to a value), dereference with `*x` to get a *mutable* access to the value.
+
+* If `x: &i32` (an immutable reference to a value), dereference with `*x` to get a *immutable* access to the value.
+
+* Since referencing is implimented via pointers, at any given time, you can have either *exactly one* _mutable reference_ or *any number* of _immutable references_. 
+
