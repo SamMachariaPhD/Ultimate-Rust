@@ -20,7 +20,7 @@ fn main() {
     // the String if it doesn't already end with "s". Then uncomment and run the code below with
     // `cargo run apple`.  Hint: use `.push_str("s")` on the mutable String reference to add an "s".
     //
-    //change(&mut arg);
+    change(&mut arg);
     //println!("I have many {}", arg);
 
     // 3. Write a function `eat` that accepts ownership of (consumes) a String and returns a bool
@@ -47,5 +47,13 @@ fn inspect(arg: &String){
         println!("Plural");
     } else {
         println!("Singular");
+    }
+}
+
+fn change(arg: &mut String){
+    if !arg.ends_with("s"){
+        println!("I have many {:?}", arg.push_str("s"));
+    } else {
+        println!("I have many {}", arg); // the output is just "I have many ()". Why just "()" and not the actual `arg`?
     }
 }
