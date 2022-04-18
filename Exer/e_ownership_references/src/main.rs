@@ -28,11 +28,11 @@ fn main() {
     // Hint 1: use `.starts_with("b")` and `.contains("a")`
     // Hint 2: `&&` is the boolean "AND" operator
     //
-    //if eat(arg) {
-    //    println!("Might be bananas");
-    //} else {
-    //    println!("Not bananas");
-    //}
+    if eat(arg) {
+       println!("Might be bananas");
+    } else {
+       println!("Not bananas");
+    }
 
     // Try running this program with "boat", "banana", and "grapes" as the arguments :-)
 
@@ -56,4 +56,8 @@ fn change(arg: &mut String){
     } else {
         println!("I have many {}", arg); // the output is just "I have many ()". Why just "()" and not the actual `arg`?
     }
+}
+
+fn eat(arg: String) -> bool{
+    return arg.starts_with("b") && arg.contains("a") 
 }
