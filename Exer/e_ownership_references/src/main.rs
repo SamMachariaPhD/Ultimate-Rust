@@ -21,7 +21,7 @@ fn main() {
     // `cargo run apple`.  Hint: use `.push_str("s")` on the mutable String reference to add an "s".
     //
     change(&mut arg);
-    //println!("I have many {}", arg);
+    println!("I have many {}", arg);
 
     // 3. Write a function `eat` that accepts ownership of (consumes) a String and returns a bool
     // indicating whether or not the String both starts with a "b" AND contains an "a".
@@ -44,18 +44,16 @@ fn main() {
 
 fn inspect(arg: &String){
     if arg.ends_with("s"){
-        println!("Plural");
+        println!("'{}' is: plural", arg);
     } else {
-        println!("Singular");
+        println!("'{}' is: singular", arg);
     }
 }
 
 fn change(arg: &mut String){
     if !arg.ends_with("s"){
-        println!("I have many {:?}", arg.push_str("s"));
-    } else {
-        println!("I have many {}", arg); // the output is just "I have many ()". Why just "()" and not the actual `arg`?
-    }
+        return arg.push_str("s");
+    } 
 }
 
 fn eat(arg: String) -> bool{
