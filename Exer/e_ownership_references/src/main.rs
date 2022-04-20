@@ -51,12 +51,12 @@ fn inspect(arg: &String){
 }
 
 fn change(arg: &mut String){
-    if !arg.ends_with("s"){
+    if !arg.ends_with("s"){ // works because we've a mutable string 
         return arg.push_str("s");
     } 
 }
 
-fn eat(arg: String) -> bool{
+fn eat(arg: String) -> bool{ // this is going to take a string by value - consume. The value passed into this function is not going to be usable anymore.
     return arg.starts_with("b") && arg.contains("a") 
 }
 

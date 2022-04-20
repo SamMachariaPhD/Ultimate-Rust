@@ -538,3 +538,16 @@ fn do_stuff(s: &mut String){ // '&mut '
 
 * Since referencing is implimented via pointers, at any given time, you can have either *exactly one* _mutable reference_ or *any number* of _immutable references_. 
 
+== Structs 
+
+* Other languages have classes.
+* Structs can have data fields, methods, and associated functions. 
+
+[source, rust]
+----
+struct RedFox{ // keyword and the name of the struct (capital camel)
+    enemy: bool, // fields and their types in a comma-separated list 
+    life: u8,
+}
+----
+
