@@ -545,9 +545,21 @@ fn do_stuff(s: &mut String){ // '&mut '
 
 [source, rust]
 ----
-struct RedFox{ // keyword and the name of the struct (capital camel)
+struct CoolBunny{ // keyword and the name of the struct (capital camel)
     enemy: bool, // fields and their types in a comma-separated list 
-    life: u8,
+    life: u8, // it's better to end with a comma - the compiler wont complain**
 }
 ----
+
+* Specify a value for every single field.
+
+[source, rust]
+----
+let bunny = CoolBunny{
+    enemy: false,
+    life: 10,
+};
+----
+
+
 
