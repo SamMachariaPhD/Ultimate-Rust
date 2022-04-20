@@ -39,7 +39,7 @@ fn main() {
     // Challenge: Write a function "add" that takes *references* to two integer arguments,
     // dereferences them and adds them together, and returns the result.
     //
-    // println!("1 + 2 = {}, even via references", add(&1, &2));
+    println!("1 + 2 = {}, even via references", add(&1, &2));
 }
 
 fn inspect(arg: &String){
@@ -58,4 +58,8 @@ fn change(arg: &mut String){
 
 fn eat(arg: String) -> bool{
     return arg.starts_with("b") && arg.contains("a") 
+}
+
+fn add(x: &i32,y: &i32) -> i32{
+*x+*y
 }
