@@ -561,5 +561,51 @@ let bunny = CoolBunny{
 };
 ----
 
+* You can implement an associated function to use as a constructor.
 
+[source, rust]
+----
+impl bunny{             // implementation block 
+    fn new() -> Self{   // `Self` is refering to `bunny`
+        Self{
+            enemy: false,
+            life: 10,
+        }
+    }
+}
 
+let bunny = CoolBunny::new(); // access `new()`
+let life_left = bunny.life;
+bunny.enemy = true;
+fox.some_method();
+----
+
+== Traits 
+
+* Similar to interfaces in other languages. Rust takes composition over inherritance approach. 
+
+[source, rust]
+----
+struct RedFox{ 
+    enemy: bool, 
+    life: u32, 
+}
+----
+
+* `trait` defines required behaviour, functions and methods, that a `struct` must implement.
+
+[source, rust]
+----
+trait Noisy{
+    fn get_noise(&self) -> &str;
+}
+----
+
+* Implementation for the noisy trait. 
+
+[source, rust]
+----
+impl Noisy for RedFox{
+    fn get_noise(&self) -> &str {"Euooo!"}
+}
+----
