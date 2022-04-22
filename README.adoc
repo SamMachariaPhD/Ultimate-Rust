@@ -627,3 +627,6 @@ fn main(){
 }
 ----
 
+* There's a special trait `copy` if your type implements a copy, it will be copied instead of moved - in move situations. This makes sense for small values that fit entirely in the stack. If the type implements the heat at all, then it cannot implement a copy.
+
+
