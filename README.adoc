@@ -628,5 +628,17 @@ fn main(){
 ----
 
 * There's a special trait `copy` if your type implements a copy, it will be copied instead of moved - in move situations. This makes sense for small values that fit entirely in the stack. If the type implements the heat at all, then it cannot implement a copy.
+* Traits implement inheritance. 
+* Anyone who implements your traits is going to have to implement the parent trait as well. 
+* Traits can have default behaviours. 
+
+[source, rust]
+----
+trait Run{
+    fn run(&self){
+        println!("Running...");
+    }
+}
+----
 
 
