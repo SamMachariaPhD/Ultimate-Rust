@@ -636,9 +636,18 @@ fn main(){
 ----
 trait Run{
     fn run(&self){
-        println!("Running...");
+        println!("Running..."); // default behaviour 
     }
+}
+
+struct Robot {}
+impl Run for Robot {}
+
+fn main(){
+    let robot = Robot {}; // implement the Run trait 
+    robot.run(); // executes default behaviour 
 }
 ----
 
+* You can't define fields as part of traits. 
 
