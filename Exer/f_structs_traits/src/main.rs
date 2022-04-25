@@ -6,6 +6,10 @@
 //
 //  trait Bite...
 
+trait Bite {
+    fn bite(self: &mut Self)
+}
+
 
 // 2. Now create a struct named Grapes with a field that tracks how many grapes are left.  If you
 // need a hint, look at how it was done for Carrot at the bottom of this file (you should probably
