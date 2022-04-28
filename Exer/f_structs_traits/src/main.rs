@@ -28,6 +28,12 @@ struct Grapes {
 //
 // impl Bite for...
 
+impl Bite for Grapes{
+    fn bite (self: &mut Self){
+        self.amount_left -= 1;
+    }
+}
+
 
 fn main() {
     // Once you finish #1 above, this part should work.
@@ -38,9 +44,9 @@ fn main() {
     // 4. Uncomment and adjust the code below to match how you defined your
     // Grapes struct.
     //
-    //let mut grapes = Grapes { amount_left: 100 };
-    //grapes.bite();
-    //println!("Eat a grape: {:?}", grapes);
+    let mut grapes = Grapes { amount_left: 100 };
+    grapes.bite();
+    println!("Eat a grape: {:?}", grapes);
 
     // Challenge: Uncomment the code below. Create a generic `bunny_nibbles`
     // function that:
