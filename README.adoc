@@ -651,3 +651,26 @@ fn main(){
 
 * You can't define fields as part of traits. 
 
+== Collections 
+
+* These collections are in the standard library. 
+
+* `Vec<T>` is a generic collection that holds a bunch of one type. It is useful in a similar way to lists and arrays in Python. 
+
+* This is an example of a vector:
+
+[source, rust]
+----
+let mut v: Vec<i32> = Vec::new(); // create a vector
+v.push(3); // add values 
+v.push(5);
+v.push(7);
+v.push(2);
+v.pop(); // remove 2
+let v = v.pop(); // v = 7 
+----
+
+* Using `vec!` is a simple way to create vectors. Rust can infer the type of the values stored in a vector. e.g. `let v = vec![3,5,7];`.
+
+* In `HashMap`, you specify a type for the key and a type for the value. 
+
