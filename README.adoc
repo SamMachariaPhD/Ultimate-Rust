@@ -670,7 +670,18 @@ v.pop(); // remove 2
 let v = v.pop(); // v = 7 
 ----
 
-* Using `vec!` is a simple way to create vectors. Rust can infer the type of the values stored in a vector. e.g. `let v = vec![3,5,7];`.
+* Using `vec!` is a simple way to create vectors. Rust can infer the type of the values stored in a vector. e.g. `let v = vec![3,5,7];`. There are several methods in the standard library to play with vectors. 
 
-* In `HashMap`, you specify a type for the key and a type for the value. 
+* In `HashMap<K, V>`, is a generic collection - you specify a type for the key and a type for the value. This is similar to Python dictionaries. You can insert look up and remove values by key. 
+
+[source, rust]
+----
+let mut h: HashMap<u8, bool> = HashMap::new(); // specify types key (u8) and value (bool)
+h.insert(4, true); // insert value 
+h.insert(7, false);
+let have_four = h.remove(&4).unwrap(); // remove
+----
+
+
+
 
