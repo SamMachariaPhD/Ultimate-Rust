@@ -682,6 +682,7 @@ h.insert(7, false);
 let have_four = h.remove(&4).unwrap(); // remove
 ----
 
+* Other collections are as follows. `VecDeque` - implements are double-ended queue and can remove items from both front/back but slower*. `LinkedList` - can add or remove items at an arbitrary point in the list but also slow. `HashSet` - perform set operations efficiently. `BinaryHeap` - a priority queue which pops off the max value.  `BTreeMap` and `BTreeSet` - alternate map and set implementations that use a modified binary tree - they are used if you need the map keys or set values to always be sorted.  
 
 
-
+== Enums 
