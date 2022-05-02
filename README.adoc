@@ -686,3 +686,25 @@ let have_four = h.remove(&4).unwrap(); // remove
 
 
 == Enums 
+
+* They are like algebraic data types. 
+
+[source, rust]
+----
+enum Color { // enum name in capital camel case
+Red, 
+Green,
+Blue,
+}
+
+let color = Color::Red; // can use it like this but,
+
+// enums are used in associating data and methods with the variables 
+// an enum may be specified as you wish 
+enum DispenserItem{
+    Empty, 
+    Ammo(u8),
+    Things(String, i32),
+    Place{x:i32, y}
+}
+----
