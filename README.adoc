@@ -687,7 +687,7 @@ let have_four = h.remove(&4).unwrap(); // remove
 
 == Enums 
 
-* They are like algebraic data types. 
+* They are like algebraic data types. An `enum` is like a union in `C` but better.
 
 [source, rust]
 ----
@@ -705,6 +705,14 @@ enum DispenserItem{
     Empty, 
     Ammo(u8),
     Things(String, i32),
-    Place{x:i32, y}
+    Place{x:i32, y:i32}
 }
+
+// your `DispenserItem` could be an 'empty'
+use DispenserItem::*
+let item = Empty;
+let item = Ammo(69); // it could be an 'Ammo' with a single bite
+let item = Things("hat".to_string(), 7) // or a string with a 32 bit int 
+let item = Place{x:25, y:258}; // or coordinate 
 ----
+
