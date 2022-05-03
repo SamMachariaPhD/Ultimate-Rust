@@ -714,5 +714,16 @@ let item = Empty;
 let item = Ammo(69); // it could be an 'Ammo' with a single bite
 let item = Things("hat".to_string(), 7) // or a string with a 32 bit int 
 let item = Place{x:25, y:258}; // or coordinate 
+
+// can implement functions and methods for enum 
+impl DispenserItem{
+    fn display(&self){ }
+}
+
+// can use enums with generics 
+enum Option<T>{
+    Some(T),
+    None,
+}
 ----
 
