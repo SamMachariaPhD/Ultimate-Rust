@@ -721,9 +721,30 @@ impl DispenserItem{
 }
 
 // can use enums with generics 
-enum Option<T>{
+enum Option<T>{ // the 'T' means any type but you don't have to use 'T'
     Some(T),
     None,
 }
+
+// enums can represent all sorts of data. 
+// Use patterns to examine them for match.
+if let Some(x) = my_variable{ // if-let check for single variant 
+    println!("value is {}", x);
+}
+match my_variable{ // all variants at once
+    Some(x) => {
+        println!("value is {}", x);
+    },
+    None => { // bare values can do too: None => 42,
+        println!("no value");
+    },
+    _ => { // a pattern that matches anything
+        println!("who cares");
+    },
+}
+let x = match my_variable {
+    Some(x) => x.squared()+1,
+    None => 42,
+};
 ----
 
