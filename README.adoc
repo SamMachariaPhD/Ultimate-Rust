@@ -725,6 +725,12 @@ enum Option<T>{ // the 'T' means any type but you don't have to use 'T'
     Some(T),
     None,
 }
+let mut x: Option<i32> = None; // a none variant of an option
+// with option, the compiler can infer the type so you may leave the type anotation:
+let mut x = None;
+x = Some(5);
+x.is_some(); // helper method that returns true if x is a Some variant
+x.is_none(); // false
 
 // enums can represent all sorts of data. 
 // Use patterns to examine them for match.
