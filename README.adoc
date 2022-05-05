@@ -754,3 +754,29 @@ let x = match my_variable {
 };
 ----
 
+* `Result` `enum` is used when something migth have a useful result or might have an error.
+
+[source, rust]
+----
+#[must_use]
+enum Result<T, E> { // T & E are generic but independent of each other.
+    Ok(T),
+    Err(E),
+}
+
+// for example
+use std::fs::File;
+fn main(){
+    let res = File::open("foo"); // if the results are ok
+    let f = res.unwrap(); // if error occurs 
+    let f = res.expect("error msg"); // or use expect meth
+    if res.is_ok(){ // or '.is_error' are helper meth
+        let f = res.unwrap();
+    }
+    match res{ // can also do pattern matching 
+        Ok(f) => {/*do sth*/},
+        Err(e) => {/*do sth*/},
+    }
+}
+----
+
