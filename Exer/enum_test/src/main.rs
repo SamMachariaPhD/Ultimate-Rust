@@ -16,3 +16,4 @@ fn main() {
         Continent::Oceania => print!("O"),
     }
 }
+
