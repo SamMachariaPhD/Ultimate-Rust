@@ -782,3 +782,6 @@ fn main(){
 
 == Closures 
 
+* This is an anonymous function that can borrow or capture some data from the scope it is nested in. 
+* Its syntax is as follows. `|x, y|{x + y}`
+
