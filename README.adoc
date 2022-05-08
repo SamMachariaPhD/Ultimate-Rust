@@ -784,4 +784,12 @@ fn main(){
 
 * This is an anonymous function that can borrow or capture some data from the scope it is nested in. 
 * Its syntax is as follows. `|x, y|{x + y}`
+* Let's assign a closure to a variable add.
+
+[source, rust]
+----
+let add = |x, y| {x + y};
+// you may leave the parameters empty: `|| {x + y}` or `|| {}`
+add(1,2); // returns 3
+----
 
