@@ -793,3 +793,14 @@ let add = |x, y| {x + y};
 add(1,2); // returns 3
 ----
 
+* A closure will borrow a reference to values in the enclosing scope.
+
+[source, rust]
+----
+let s = "strwb".to_string();
+let f = || {
+    println!("{}", s);
+};
+
+f(); // prints strwb
+----
