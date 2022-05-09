@@ -798,9 +798,24 @@ add(1,2); // returns 3
 [source, rust]
 ----
 let s = "strwb".to_string();
-let f = || {
+let f = || { // not good if `f outlives s`*
+    println!("{}", s);
+};
+let f = move || { // force the closure to move any variable to itself and take ownership
     println!("{}", s);
 };
 
 f(); // prints strwb
+----
+
+* Closures are good for functional style programming
+
+[source, rust]
+----
+let mut v = vec![2, 4, 6];
+
+v.iter()
+    .map(|x| x*3)
+    .filter(|x| *x>10)
+    .fold(0, |acc, x| acc + x);
 ----
