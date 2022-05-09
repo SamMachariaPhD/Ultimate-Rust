@@ -814,8 +814,12 @@ f(); // prints strwb
 ----
 let mut v = vec![2, 4, 6];
 
-v.iter()
-    .map(|x| x*3)
-    .filter(|x| *x>10)
-    .fold(0, |acc, x| acc + x);
+v.iter() // get an iterator 
+    .map(|x| x*3) // multiply each item in a vector by 3
+    .filter(|x| *x>10) // discard if not greater than 10
+    .fold(0, |acc, x| acc + x); // sum the remaining values
 ----
+
+== Threads
+
+
