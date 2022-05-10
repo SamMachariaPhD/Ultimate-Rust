@@ -822,4 +822,19 @@ v.iter() // get an iterator
 
 == Threads
 
+* Rust threading is portable across platforms. 
+
+[source, rust]
+----
+use std::thread;
+fn main(){
+    let handle = thread::spawn(move || {
+        // do sth in this child thread*
+    });
+    // do sth sumultaneously in the main thread
+    // wait until thread has exited 
+    handle.join().unwrap();
+}
+----
+
 
