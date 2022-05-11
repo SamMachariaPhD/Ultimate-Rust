@@ -828,12 +828,12 @@ v.iter() // get an iterator
 ----
 use std::thread;
 fn main(){
-    let handle = thread::spawn(move || {
+    let handle = thread::spawn(move || { // 'thread::spawn' takes a closure with no argument
         // do sth in this child thread*
     });
     // do sth sumultaneously in the main thread
     // wait until thread has exited 
-    handle.join().unwrap();
+    handle.join().unwrap(); // 'spawn' returns a join handle. 'join' pauses the thread we are on, untill the thread we're joining has completed and exited.
 }
 ----
 
