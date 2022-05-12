@@ -835,6 +835,9 @@ fn main(){
     // wait until thread has exited 
     handle.join().unwrap(); // 'spawn' returns a join handle. 'join' pauses the thread we are on, untill the thread we're joining has completed and exited.
 }
+// the thread response could return a value successfully or it could panic.
+// from the joint, we get the result that wraps a possible success value or an error from the thread panic.
 ----
 
+* Threading is heavy weight and eats into computer memory for the threads on stack.
 
