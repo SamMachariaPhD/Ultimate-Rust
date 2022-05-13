@@ -822,6 +822,8 @@ v.iter() // get an iterator
 
 == Threads
 
+* In modern computers you can have various tasks running independently at the same time. Threads are the features that run these independent parts. Splitting the program into threads can speed up the computation time but there is no guarantee of the order in which different parts will run.
+
 * Rust threading is portable across platforms. 
 
 [source, rust]
