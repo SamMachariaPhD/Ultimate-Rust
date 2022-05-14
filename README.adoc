@@ -841,5 +841,5 @@ fn main(){
 // from the joint, we get the result that wraps a possible success value or an error from the thread panic.
 ----
 
-* Threading is heavy weight and eats into computer memory for the threads on stack.
+* Threading is heavy weight and eats into computer memory for the threads on stack. Switching from one thread to another requires an expensive context switch. It is better to have fewer threads. However, threading can accomplish more work in less time by using the CPU cores efficiently. But if you just want to do some work while waiting for some task to complete e.g. disk or network io, async-await is a better approach for concurrently waiting for things. 
 
