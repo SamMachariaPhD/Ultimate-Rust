@@ -782,6 +782,7 @@ fn main(){
 
 == Closures 
 
+* This is functional programming. Fuctions are used as values by passing them in arguments or returning them from other functions. `Closures` are function-like constructs that can be stored as variables. `Iterators` are a way of processing a series of elements. Mastering closures and iterators are an important part of writing idomatic code.
 * This is an anonymous function that can borrow or capture some data from the scope it is nested in. 
 * Its syntax is as follows. `|x, y|{x + y}`
 * Let's assign a closure to a variable add.
@@ -844,5 +845,7 @@ fn main(){
 * Threading is heavy weight and eats into computer memory for the threads on stack. Switching from one thread to another requires an expensive context switch. It is better to have fewer threads. However, threading can accomplish more work in less time by using the CPU cores efficiently. But if you just want to do some work while waiting for some task to complete e.g. disk or network io, async-await is a better approach for concurrently waiting for things. 
 
 * Threading may lead to a few problems. Threads may access data or resources in an inconsistent way. Two threads may get stuck in a deadlock, where each thread is waiting for the other to finish using a resource of the other preventing both threads from finishing. Threre could be unique errors that are hard to reproduce and fix. 
+
+* Using threading, a secondary thread can be made to stop as soon as the primary thread is stopped, regardless of its progress.
 
 
