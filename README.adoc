@@ -653,6 +653,8 @@ fn main(){
 
 == Collections 
 
+* `Collections` are data structures. Other data types represent one specific value but collections may contain multiple values. In contrast to built in array and tuples, collections are stored in heap and the actual amount of data is unknown at compile time.
+
 * These collections are in the standard library. 
 
 * `Vec<T>` is a generic collection that holds a bunch of one type. It is useful in a similar way to lists and arrays in Python. 
