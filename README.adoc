@@ -584,6 +584,8 @@ fox.some_method();
 
 * Similar to interfaces in other languages. Rust takes composition over inherritance approach. 
 
+* Generic types are tools for handling duplication concepts in Rust. 
+
 [source, rust]
 ----
 struct RedFox{ 
