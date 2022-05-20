@@ -787,7 +787,7 @@ fn main(){
 == Closures 
 
 * This is functional programming. Fuctions are used as values by passing them in arguments or returning them from other functions. `Closures` are function-like constructs that can be stored as variables. `Iterators` are a way of processing a series of elements. Mastering closures and iterators are an important part of writing idomatic code.
-* This is an anonymous function that can borrow or capture some data from the scope it is nested in. 
+* This is an anonymous function that can borrow or capture some data from the scope it is nested in. These anonymous functions can be saved as variables and passed as arguments to other functions. Unlike functions, closures can capture values from the scope in which they are defined. 
 * Its syntax is as follows. `|x, y|{x + y}`
 * Let's assign a closure to a variable add.
 
