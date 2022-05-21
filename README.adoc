@@ -692,6 +692,7 @@ let have_four = h.remove(&4).unwrap(); // remove
 == Enums 
 
 * They are like algebraic data types. An `enum` is like a union in `C` but better. They are a way of defining custom data types different from structs. They can be used to enumerate all possible variants of a certain version of a variable, say IP address. 
+* An `enum` can encode meaning along with data. A useful enum called `option` expresses that a value can either be something or nothing. An `if let` construct is a convinient idiom available to handle enums.
 
 [source, rust]
 ----
