@@ -785,7 +785,7 @@ fn main(){
 }
 ----
 
-* Rust has a powerful control flow construct called `match`. Its power comes from the ability to express patterns. 
+* Rust has a powerful control flow construct called `match`. Its power comes from the ability to express patterns. The compiler confirms that all possible cases are handled, similar to coin matching in a coin sorting machine. 
 
 == Closures 
 
