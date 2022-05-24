@@ -584,7 +584,7 @@ fox.some_method();
 
 * Similar to interfaces in other languages. Rust takes composition over inherritance approach. 
 
-* Generic types are tools for handling duplication concepts in Rust. `Generics` are abstract stand-ins for concrete types or other properties. We can express the behavior of generics without caring what they will be at compile or run time.
+* Generic types are tools for handling duplication concepts in Rust. `Generics` are abstract stand-ins for concrete types or other properties. We can express the behavior of generics without caring what they will be at compile or run time. In the same way we identify duplicated code and turn it into a function, we can identify places to use generic functions.
 
 [source, rust]
 ----
