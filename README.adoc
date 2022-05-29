@@ -839,6 +839,27 @@ fn main(){
 ----
 
 * Rust has a powerful control flow construct called `match`. Its power comes from the ability to express patterns. The compiler confirms that all possible cases are handled, similar to coin matching in a coin sorting machine. 
+* Let's use `match` to make a function that determines which coin it is.
+[source, rust]
+----
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+
+fn main() {}
+----
 
 == Closures 
 
