@@ -862,6 +862,8 @@ fn value_in_cents(coin: Coin) -> u8 {
 fn main() {}
 ----
 
+* The `match` *coin* looks similar to _if_ or _switch_ expression but can return any type -- not only bolean. In this example, the type is the *Coin* `enum` defined at the begining.
+
 == Closures 
 
 * This is functional programming. Fuctions are used as values by passing them in arguments or returning them from other functions. `Closures` are function-like constructs that can be stored as variables. `Iterators` are a way of processing a series of elements. Mastering closures and iterators are an important part of writing idomatic code.
