@@ -932,4 +932,7 @@ fn main(){
 
 * Using threading, a secondary thread can be made to stop as soon as the primary thread is stopped, regardless of its progress.
 
+== Error Handling
+
+* Rust expects programs to have errors. For that, it prepares mechanisms to handle erros ahead of time. This significantly minimizes the possibility of errors in you code at run time.
 
