@@ -891,7 +891,8 @@ fn value_in_cents(coin: Coin) -> u8 {
 fn main() {}
 ----
 
-* The `match` *coin* looks similar to _if_ or _switch_ expression but can return any type -- not only bolean. In this example, the type is the *Coin* `enum` defined at the begining.
+* The `match` *coin* looks similar to _if_ or _switch_ expression but can return any type -- not only bolean. In this example, the type is the *Coin* `enum` which is defined in the begining. 
+* `match` has two parts: the pattern and the code. The `=>` points to the code being matched with. For the case of `Coin::Penny => 1`, the pattern is the `Coin::Penny` and the code is `1`.
 
 == Closures 
 
