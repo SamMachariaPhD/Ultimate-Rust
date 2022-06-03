@@ -893,6 +893,7 @@ fn main() {}
 
 * The `match` *coin* looks similar to _if_ or _switch_ expression but can return any type -- not only bolean. In this example, the type is the *Coin* `enum` which is defined in the begining. 
 * `match` has two parts: the pattern and the code. The `=>` points to the code being matched with. For the case of `Coin::Penny => 1`, the pattern is the `Coin::Penny` and the code is `1`. Each match is separated by a comma. 
+* If a pattern matches the value, the code associated with that pattern is executed. 
 
 == Closures 
 
