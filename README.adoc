@@ -735,6 +735,8 @@ fn main() {
 }
 ----
 
+* In the _largest_ function, we are not referencing to `i32`. We're pattern matching and deconstructing each `&i32`. 
+
 == Collections 
 
 * `Collections` are data structures. Other data types represent one specific value but collections may contain multiple values. In contrast to built in array and tuples, collections are stored in heap and the actual amount of data is unknown at compile time.
