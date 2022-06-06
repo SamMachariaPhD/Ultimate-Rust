@@ -922,7 +922,8 @@ fn value_in_cents(coin: Coin) -> u8 {
 fn main() {}
 ----
 
-* `match` arms can also bind to the parts of the values that match the pattern.
+* `match` arms can also bind to the parts of the values that match the pattern. We can extract values out of enum variants. 
+* We can change enum variants to hold data inside. 
 
 
 == Closures 
