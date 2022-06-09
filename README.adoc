@@ -738,6 +738,7 @@ fn main() {
 * In the _largest_ function, we are not referencing to `i32`. We're pattern matching and deconstructing each `&i32`. 
 * In the same way that the function can take an abstract list, generics can take abstract types. For example, if the function could possibly encounter both the `list` and a `char`.  
 * When defining a function that uses generics, generics are placed in the signature of the function, the place for specifying data types. 
+* Generics provide flexibility and more functionality to callers of the function without duplicating it. 
 
 == Collections 
 
