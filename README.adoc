@@ -926,7 +926,26 @@ fn main() {}
 ----
 
 * `match` arms can also bind to the parts of the values that match the pattern. We can extract values out of enum variants. 
-* We can change enum variants to hold data inside. 
+* We can change enum variants to hold data inside. For example, let's say `Quarter` in `Coin` `enum` has variants in various states in the US. We can change the `Quater` to hold data for those states that have variants. 
+
+[source, rust]
+----
+#[derive(Debug)] // so we can inspect the state in a minute
+enum UsState {
+    Alabama,
+    Alaska,
+    // --snip--
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+fn main() {}
+----
 
 
 == Closures 
