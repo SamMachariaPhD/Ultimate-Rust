@@ -947,6 +947,7 @@ enum Coin {
 fn main() {}
 ----
 
+* We can add a variable called `state` to the pattern that matches the values of the variant `Coin::Quarter`. The `state` variable will bind to the values of the `Quarter` state in the invent of a `Coin::Quater` `match`.
 
 == Closures 
 
