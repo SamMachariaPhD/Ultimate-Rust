@@ -947,7 +947,40 @@ enum Coin {
 fn main() {}
 ----
 
-* We can add a variable called `state` to the pattern that matches the values of the variant `Coin::Quarter`. The `state` variable will bind to the values of the `Quarter` state in the invent of a `Coin::Quater` `match`.
+* We can add a variable called `state` to the pattern that matches the values of the variant `Coin::Quarter`. The `state` variable will bind to the values of the `Quarter` state in the invent of a `Coin::Quater` `match`. 
+
+[source, rust]
+----
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+    // --snip--
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}!", state);
+            25
+        }
+    }
+}
+
+fn main() {
+    value_in_cents(Coin::Quarter(UsState::Alaska));
+}
+----
 
 == Closures 
 
