@@ -740,6 +740,50 @@ fn main() {
 * When defining a function that uses generics, generics are placed in the signature of the function, the place for specifying data types. 
 * Generics provide flexibility and more functionality to callers of the function without duplicating it. 
 
+[source, rust]
+----
+fn largest_i32(list: &[i32]) -> i32 {
+    let mut largest = list[0];
+
+    for &item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
+
+fn largest_char(list: &[char]) -> char {
+    let mut largest = list[0];
+
+    for &item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
+
+fn main() {
+    let number_list = vec![34, 50, 25, 100, 65];
+
+    let result = largest_i32(&number_list);
+    println!("The largest number is {}", result);
+    assert_eq!(result, 100);
+
+    let char_list = vec!['y', 'm', 'a', 'q'];
+
+    let result = largest_char(&char_list);
+    println!("The largest char is {}", result);
+    assert_eq!(result, 'y');
+}
+----
+
+* `largest_i32` finds the largest number, while `largest_char` finds the largest character. 
+
+
 == Collections 
 
 * `Collections` are data structures. Other data types represent one specific value but collections may contain multiple values. In contrast to built in array and tuples, collections are stored in heap and the actual amount of data is unknown at compile time.
