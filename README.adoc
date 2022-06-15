@@ -1028,6 +1028,17 @@ fn main() {
 
 * Similar to the `Coin` `enum`, `Option<T>` can be handled using a `match` expression.
 
+
+
+* Enums are not compatible witht the `==` operator. The following is not allowed. 
+
+[source, rust]
+----
+enum Direction {North, East, West, South}
+let dir = Direction::South;
+let dir == Direction::North{}
+----
+
 == Closures 
 
 * This is functional programming. Fuctions are used as values by passing them in arguments or returning them from other functions. `Closures` are function-like constructs that can be stored as variables. `Iterators` are a way of processing a series of elements. Mastering closures and iterators are an important part of writing idomatic code.
