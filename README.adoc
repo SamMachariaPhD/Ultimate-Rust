@@ -1035,9 +1035,11 @@ fn main() {
 [source, rust]
 ----
 enum Direction {North, East, West, South}
-let dir = Direction::South;
-let dir == Direction::North{}
+let direc = Direction::South;
+if direc == Direction::North{}
 ----
+
+* The binary operation `if direc` cannot be applied to type `Direction`. A `match` statement is thus needed to check the value of an `enum`.
 
 == Closures 
 
