@@ -1040,6 +1040,7 @@ if direc == Direction::North{}
 ----
 
 * The binary operation `if direc` cannot be applied to type `Direction`. A `match` statement is thus needed to check the value of an `enum`.
+* Other relational operators are also forbidden. The `match` construct therefore becomes very important when using `enum`.
 
 == Closures 
 
