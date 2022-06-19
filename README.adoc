@@ -1040,7 +1040,8 @@ if direc == Direction::North{}
 ----
 
 * The binary operation `if direc` cannot be applied to type `Direction`. A `match` statement is thus needed to check the value of an `enum`.
-* Other relational operators are also forbidden. The `match` construct therefore becomes very important when using `enum`. Enums are ubiquitous in Rust libraries, and match constructs are the linchpin of using enums.
+* Other relational operators are also forbidden. The `match` construct therefore becomes very important when using `enum`. Enums are ubiquitous in Rust libraries, and match constructs are the linchpin of using enums. 
+* 
 
 == Closures 
 
@@ -1114,3 +1115,6 @@ fn main(){
 
 * Rust expects programs to have errors. For that, it prepares mechanisms to handle erros ahead of time. This significantly minimizes the possibility of errors in you code at run time.
 
+== Option 
+
+* Sometimes it is better to catch the failure of a program instead of calling `panic!`. This can be accomplished by `Option` `enum`.
