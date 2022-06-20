@@ -1117,4 +1117,6 @@ fn main(){
 
 == Option 
 
-* Sometimes it is better to catch the failure of a program instead of calling `panic!`. This can be accomplished by `Option` `enum`.
+* Sometimes it is better to catch the failure of a program instead of calling `panic!`. This can be accomplished by `Option` `enum`. 
+* An error output may leak some important information. Other languages may use `null`, `nil`, or `undefined` to represent empty outputs.
+
