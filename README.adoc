@@ -1115,8 +1115,8 @@ fn main(){
 
 * Rust expects programs to have errors. For that, it prepares mechanisms to handle erros ahead of time. This significantly minimizes the possibility of errors in you code at run time.
 
-== Option 
+== Option and Result 
 
 * Sometimes it is better to catch the failure of a program instead of calling `panic!`. This can be accomplished by `Option` `enum`. 
-* An error output may leak some important information. Other languages may use `null`, `nil`, or `undefined` to represent empty outputs.
+* An error output may leak some important information. Other languages may use `null`, `nil`, or `undefined` to represent empty outputs, and `exceptions` to deal with errors. Instead, *Rust* provides the two `genereric` `enums` `Option` and `Result` to handle these cases. 
 
