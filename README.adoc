@@ -1120,3 +1120,8 @@ fn main(){
 * Sometimes it is better to catch the failure of a program instead of calling `panic!`. This can be accomplished by `Option` `enum`. 
 * An error output may leak some important information. Other languages may use `null`, `nil`, or `undefined` to represent empty outputs, and `exceptions` to deal with errors. Instead, *Rust* provides the two `genereric` `enums` `Option` and `Result` to handle these cases. 
 
+=== When to use `Option`
+
+* If an argument of a function is optional. 
+* If the function is non-void and the output of the function can be empty. 
+* If the value of the property of a data type can be empty. 
