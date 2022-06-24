@@ -1125,3 +1125,18 @@ fn main(){
 * If an argument of a function is optional. 
 * If the function is non-void and the output of the function can be empty. 
 * If the value of the property of a data type can be empty. 
+* The following function outputs `&str` and can be empty. We set the return type of the function as `Option <&str>`. 
+
+[source, rust]
+----
+fn get_an_optional_value() -> Option<&str> {
+
+    //if the optional value is not empty
+    return Some("Some value");
+    
+    //else
+    None
+}
+----
+
+
