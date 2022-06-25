@@ -1139,4 +1139,6 @@ fn get_an_optional_value() -> Option<&str> {
 }
 ----
 
+* `Option <T>` can also be handled using `match` similar to the `Coin` `enum`.
+
 
