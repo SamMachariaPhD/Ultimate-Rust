@@ -2,7 +2,7 @@
 static NO:f64 = 5.0;
 
 fn sq(sth: f64) -> f64{
-    sth*sth
+    sth*sth // `return sth*sth;` also works but rarely used
 }
 
 fn main() {
