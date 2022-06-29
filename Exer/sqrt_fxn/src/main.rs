@@ -6,6 +6,15 @@ fn sq(sth: f64) -> f64{
     sth*sth // `return sth*sth;` also works but rarely used
 }
 
+// absolute value of a floating-point number
+fn abs(x: f64) -> f64 {
+    if x > 0.0 {
+        x
+    } else {
+        -x
+    }
+}
+
 fn main() {
     let mut n_ = String::new();
     
