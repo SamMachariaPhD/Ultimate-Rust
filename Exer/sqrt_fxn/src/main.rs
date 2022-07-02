@@ -15,6 +15,17 @@ fn abs(x: f32) -> f32 {
     }
 }
 
+// ensure the number always falls in the given range
+fn clamp(x: f32, x1: f32, x2: f32) -> f32 {
+    if x < x1 {
+        x1
+    } else if x > x2 {
+        x2
+    } else {
+        x
+    }
+}
+
 fn main() {
     let mut n_ = String::new();
     
