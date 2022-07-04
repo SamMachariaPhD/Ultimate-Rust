@@ -1142,4 +1142,13 @@ fn get_an_optional_value() -> Option<&str> {
 * `Option <T>` can also be handled using `match` similar to the `Coin` `enum`.
 * The value of the data may be empty e.g. the `middle_name` of `Name` may be left empty. In such a case, the data type should be `Option` type. 
 
+[source, rust]
+----
+struct Name {
+  first_name: String,
+  middle_name: Option<String>, // middle_name can be empty
+  last_name: String,
+}
+----
+
 
