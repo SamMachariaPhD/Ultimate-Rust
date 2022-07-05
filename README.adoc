@@ -1150,5 +1150,5 @@ struct Name {
   last_name: String,
 }
 ----
-
+* We can use pattern matching to catch the relevant return type. 
 
