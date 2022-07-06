@@ -1151,4 +1151,18 @@ struct Name {
 }
 ----
 * We can use pattern matching to catch the relevant return type. 
+* In a function to get the user's home directory, `Option` can be used because not all users have a _home_ directory. 
+
+[source, rust]
+----
+use std::env;
+
+fn main() {
+    let home_path = env::home_dir();
+    match home_path {
+        Some(p) => println!("{:?}", p), // This prints "/root", if you run this in Rust playground
+        None => println!("Can not find the home directory!"),
+    }
+}
+----
 
