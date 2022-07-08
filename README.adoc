@@ -1185,3 +1185,6 @@ fn main() {
 // 💡 Better create a struct as Person with fname, lname, mname fields and create a impl function as full_name()
 ----
 
+=== When to use `Result` 
+
+* If a function can produce an error, we have to use `Result` type, which combines the output data type and the error data type. 
