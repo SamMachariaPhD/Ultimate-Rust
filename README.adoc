@@ -1188,3 +1188,17 @@ fn main() {
 === When to use `Result` 
 
 * If a function can produce an error, we have to use `Result` type, which combines the output data type and the error data type. 
+
+[source, rust]
+----
+fn function_with_error() -> Result<u64, String> {
+  
+    //if error happens
+    return Err("The error message".to_string());
+
+    // else, return valid output
+    Ok(255)
+}
+----
+
+
