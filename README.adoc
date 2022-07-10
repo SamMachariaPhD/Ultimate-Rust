@@ -1201,4 +1201,5 @@ fn function_with_error() -> Result<u64, String> {
 }
 ----
 
+* `match` can then be used to catch the relevant return types. 
 
