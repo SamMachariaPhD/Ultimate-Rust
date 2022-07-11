@@ -916,6 +916,8 @@ fn main(){
 }
 ----
 
+=== Match 
+
 * Rust has a powerful control flow construct called `match`. Its power comes from the ability to express patterns. The compiler confirms that all possible cases are handled, similar to coin matching in a coin sorting machine. 
 * Let's use `match` to make a function that determines which coin it is.
 
@@ -1041,7 +1043,18 @@ if direc == Direction::North{}
 
 * The binary operation `if direc` cannot be applied to type `Direction`. A `match` statement is thus needed to check the value of an `enum`.
 * Other relational operators are also forbidden. The `match` construct therefore becomes very important when using `enum`. Enums are ubiquitous in Rust libraries, and match constructs are the linchpin of using enums. 
-* 
+* Match can be used with other data types without enums. Various `match` statements may have string, integer, or character in their arguments. 
+
+[source, rust]
+----
+match "value" {
+    "val" => print!("value"),
+    _ => print!("other"), 
+{
+match 5 {
+    5 => print!("five"), 
+{
+----
 
 == Closures 
 
