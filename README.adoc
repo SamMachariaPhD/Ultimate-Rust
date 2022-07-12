@@ -1053,8 +1053,13 @@ match "value" {
 {
 match 5 {
     5 => print!("five"), 
-{
+}
+match ':' {
+'.' => print!("point"), 
+}
 ----
+
+* With `match` and arguments that are not `enum`, it is required that all possible cases are handled. 
 
 == Closures 
 
