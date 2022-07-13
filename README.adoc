@@ -1061,6 +1061,10 @@ match ':' {
 
 * With `match` and arguments that are not `enum`, it is required that all possible cases are handled. 
 
+=== is_some(), is_none(), is_ok(), is_err() 
+
+* Other than `match`, rust has `is_some()`, `is_none()`, `is_ok()`, `is_err()` to identify the return type.
+
 == Closures 
 
 * This is functional programming. Fuctions are used as values by passing them in arguments or returning them from other functions. `Closures` are function-like constructs that can be stored as variables. `Iterators` are a way of processing a series of elements. Mastering closures and iterators are an important part of writing idomatic code.
