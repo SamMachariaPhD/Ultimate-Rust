@@ -1065,6 +1065,19 @@ match ':' {
 
 * Other than `match`, rust has `is_some()`, `is_none()`, `is_ok()`, `is_err()` to identify the return type.
 
+[source, rust]
+----
+fn main() {
+    let x: Option<&str> = Some("Hello, world!");
+    assert_eq!(x.is_some(), true);
+    assert_eq!(x.is_none(), false);
+
+    let y: Result<i8, &str> = Ok(10);
+    assert_eq!(y.is_ok(), true);
+    assert_eq!(y.is_err(), false);
+}
+----
+
 == Closures 
 
 * This is functional programming. Fuctions are used as values by passing them in arguments or returning them from other functions. `Closures` are function-like constructs that can be stored as variables. `Iterators` are a way of processing a series of elements. Mastering closures and iterators are an important part of writing idomatic code.
