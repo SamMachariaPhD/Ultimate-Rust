@@ -1237,4 +1237,6 @@ fn function_with_error() -> Result<u64, String> {
 ----
 
 * `match` can then be used to catch the relevant return types. 
+* `std::env` as `var()` can fetch the value of any environment variable. The input is the name of the environment variable. An error is produced if the wrong environment variable name is provided or if the program cannot extract the value of the environment variable. 
+
 
