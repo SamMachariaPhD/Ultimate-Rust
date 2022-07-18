@@ -15,3 +15,10 @@ fn runs(){
     let res = cmd.output();
     assert!(res.is_ok());
 }
+
+#[test]
+fn runs2(){
+    let mut cmd2 = Command::new("pwd");
+    let res2 = cmd2.output();
+    assert!(res2.is_ok());
+}
