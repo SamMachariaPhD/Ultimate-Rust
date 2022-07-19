@@ -1,0 +1,12 @@
+/home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/tests/target/debug/deps/assert_cmd-e4c927e9a276d82f.rmeta: /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/lib.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/assert.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cargo.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cmd.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/output.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/../README.md
+
+/home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/tests/target/debug/deps/libassert_cmd-e4c927e9a276d82f.rlib: /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/lib.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/assert.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cargo.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cmd.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/output.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/../README.md
+
+/home/sam/Documents/RUST/Udemy/Ultimate-Rust/Exer/tests/target/debug/deps/assert_cmd-e4c927e9a276d82f.d: /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/lib.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/assert.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cargo.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cmd.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/output.rs /home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/../README.md
+
+/home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/lib.rs:
+/home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/assert.rs:
+/home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cargo.rs:
+/home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/cmd.rs:
+/home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/output.rs:
+/home/sam/.cargo/registry/src/github.com-1ecc6299db9ec823/assert_cmd-1.0.8/src/../README.md:
