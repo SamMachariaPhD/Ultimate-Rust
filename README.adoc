@@ -1078,6 +1078,10 @@ fn main() {
 }
 ----
 
+=== Using guards in `match` construct 
+
+* In addition to `match` expression, an `if` clause can be added to match only if a boolean condition is true. This *guard* _protects_ an expression by an arbitrary boolean condition.   
+
 == Closures 
 
 * This is functional programming. Fuctions are used as values by passing them in arguments or returning them from other functions. `Closures` are function-like constructs that can be stored as variables. `Iterators` are a way of processing a series of elements. Mastering closures and iterators are an important part of writing idomatic code.
