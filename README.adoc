@@ -1104,7 +1104,11 @@ for n in -2..5 {
 2 is plural 
 3 is plural 
 4 is plural 
-----
+---- 
+
+=== _if-let_ and _while-let_ construct 
+
+* sometimes we may want to know if an _enum_ is a certain variant, and in such a case, extract its values. 
 
 
 == Closures 
