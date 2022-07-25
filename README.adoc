@@ -1106,9 +1106,24 @@ for n in -2..5 {
 4 is plural 
 ---- 
 
-=== _if-let_ and _while-let_ construct 
+=== `if-let` and `while-let` construct 
 
 * sometimes we may want to know if an _enum_ is a certain variant, and in such a case, extract its values. 
+* This may be implemented as follows. 
+
+[source, rust]
+----
+enum E{
+    Case1(u32),
+    Case2(char),
+    Case3(i64, bool), 
+}
+let v = E::Case3(1234, true); 
+match v{
+    E::Case3(n, b) => if b{ print!("{}", n) }
+    _ => {} 
+}
+----
 
 
 == Closures 
