@@ -1123,7 +1123,9 @@ match v{
     E::Case3(n, b) => if b{ print!("{}", n) }
     _ => {} 
 }
-----
+---- 
+
+* If the match is successful, the values of _v_ are transferred to _n_ and _b_. 
 
 
 == Closures 
