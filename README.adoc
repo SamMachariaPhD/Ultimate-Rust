@@ -1125,7 +1125,15 @@ match v{
 }
 ---- 
 
-* If the match is successful, the values of _v_ are transferred to _n_ and _b_. 
+* If the match is successful, the values of _v_ are acquied by _n_ and _b_. 
+* The following syntax can replace the preceding match statement. 
+
+[source, rust]
+----
+if let E::Case3(n, b) = v {
+    if b { print!("{}", n) }
+}
+----
 
 
 == Closures 
