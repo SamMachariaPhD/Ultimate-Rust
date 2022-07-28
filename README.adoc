@@ -1135,6 +1135,7 @@ if let E::Case3(n, b) = v {
 }
 ----
 
+* `if let` allows you to handle values that match one pattern while ignoring the rest. It combines `if` and `let` in a less verbose way.  
 
 == Closures 
 
