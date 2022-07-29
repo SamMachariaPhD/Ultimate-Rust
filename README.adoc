@@ -1302,3 +1302,14 @@ fn function_with_error() -> Result<u64, String> {
 
 * Rust `test` is a function annotated with the `test` attribute. This is a basic tool to test a Rust code/function if need be. 
 * When you do `cargo new project_name`, cargo will automatically generate a simple test in `src/lib.rs`. 
+
+== Heterogeneous Data Structures 
+
+* While vectors and arrays contain arrays with the same type, tuples may contain data of different type. 
+
+[source, rust]
+----
+let data = (10000, 1.23, 'w'); 
+println!("1st element of data is \t", data.0);
+---- 
+
