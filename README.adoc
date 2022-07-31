@@ -1313,7 +1313,7 @@ let data = (10000, 1.23, 'w');
 println!("1st element of data is \t", data.0);
 ---- 
 
-* Unlike arrays, tuples cannot be accessed by a variable index. 
+* Unlike arrays, tuples cannot be accessed by a variable index. The following code will panic. 
 
 [source, rust]
 ----
@@ -1323,4 +1323,9 @@ let i = 0;
 print!("{}", array[i]);
 print!("{}", tuple.i);
 ----
+
+=== The Structs 
+
+* Tuples are useful only when they hold a couple of items. The code becomes confusing as they enlarge. 
+
 
