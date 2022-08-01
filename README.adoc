@@ -1326,6 +1326,7 @@ print!("{}", tuple.i);
 
 === The Structs 
 
-* Tuples are useful only when they hold a couple of items. The code becomes confusing as they enlarge. 
+* Tuples are useful only when they hold a couple of items. The code involving tuples become confusing as they enlarge. 
+* If you wanted to specify the data type of the elements in a tuple, the list becomes too long. 
 
 
