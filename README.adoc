@@ -1329,4 +1329,6 @@ print!("{}", tuple.i);
 * Tuples are useful only when they hold a couple of items. The code involving tuples become confusing as they enlarge. 
 * If you wanted to specify the data type of the elements in a tuple, the list becomes too long. 
 
+== Unwrap and Expect 
 
+* `unwrap()` means: give me the result of the computation. If there was an error, panic and stop the program. 
