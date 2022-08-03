@@ -1297,7 +1297,7 @@ fn function_with_error() -> Result<u64, String> {
 
 * `match` can then be used to catch the relevant return types. 
 * `std::env` as `var()` can fetch the value of any environment variable. The input is the name of the environment variable. An error is produced if the wrong environment variable name is provided or if the program cannot extract the value of the environment variable. 
-
+'
 == Testing 
 
 * Rust `test` is a function annotated with the `test` attribute. This is a basic tool to test a Rust code/function if need be. 
@@ -1328,6 +1328,9 @@ print!("{}", tuple.i);
 
 * Tuples are useful only when they hold a couple of items. The code involving tuples become confusing as they enlarge. 
 * If you wanted to specify the data type of the elements in a tuple, the list becomes too long. 
+* Still, if you wanted to add/push an element infront of the tuple, any previous indexing in the source code must be updated. 
+* This is where structure comes in handy. Structs have specific statements to declare the type of the structure. 
+
 
 == Unwrap and Expect 
 
