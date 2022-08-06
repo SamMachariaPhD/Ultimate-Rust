@@ -1379,3 +1379,8 @@ int main() {
 == Unwrap and Expect 
 
 * `unwrap()` means: give me the result of the computation. If there was an error, panic and stop the program. 
+
+== The Tuple-Struts 
+
+* A kind of struct whose types have names and must be previously declared but whose fields have no names. A hybrid between tuples and structs. 
+
