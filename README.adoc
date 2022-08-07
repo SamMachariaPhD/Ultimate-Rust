@@ -1384,3 +1384,11 @@ int main() {
 
 * A kind of struct whose types have names and must be previously declared but whose fields have no names. A hybrid between tuples and structs. 
 
+== Lexical convention 
+
+* Theses are basic conventions adopted througout _Rust_ 
+* Upper snake case for constants e.g. *const MAX* 
+* Upper camel case for application code by the std library e.g. *enum VehicleKind or struct VehicleData* 
+* Snake case for any other name e.g. *let date_today* 
+
+
