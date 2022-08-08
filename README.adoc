@@ -1391,4 +1391,17 @@ int main() {
 * Upper camel case for application code by the std library e.g. *enum VehicleKind or struct VehicleData* 
 * Snake case for any other name e.g. *let date_today* 
 
+== Defining Functions  
+
+* If you write the same code several times, you can put it in a function and invoke it whenever needed. For example, if you wanted to draw a line, the following function can be constructed and invoked using *line();*. 
+
+[source, rust]
+----
+fn line() {
+    println!("----------");
+}
+line();
+line();
+line();
+----
 
