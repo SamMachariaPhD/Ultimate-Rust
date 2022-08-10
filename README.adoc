@@ -1417,4 +1417,6 @@ fn main() {
 }
 ----
 
+* Unlike variables that must be defined before use, functions can be invoked before they're defined provided that they're defined at some point within scope. 
+
 
