@@ -1419,4 +1419,13 @@ fn main() {
 
 * Unlike variables that must be defined before use, functions can be invoked before they're defined provided that they're defined at some point within scope. 
 * You may have functions with the same name as long as they are in different scopes.
+* Passing arguments to a function, say, *print_sum(2.1, 3.2)* that outputs depend on the argument inputs. 
+
+[source, rust] 
+----
+fn print_sum(addend1: f64, addend2: f64) {
+    println!("{} + {} = {}", addend1, addend2,
+        addend1 + addend2);
+}
+----
 
