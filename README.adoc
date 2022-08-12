@@ -9,7 +9,7 @@ Learning Rust Notes
 * Good for `Safety`, `Concurrency`, and `Speed`.
 
 [quote, Wikipedia CONCURRENCY, https://en.wikipedia.org/wiki/Concurrency_(computer_science)]
-In computer science, #concurrency# is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome.
+In computer science, #concurrency# is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order without affecting the final outcome.
 
 * `Python` can give you safety but not concurrency or speed.
 * `C/C++` will give you speed and some concurrency but not safety.
@@ -20,7 +20,7 @@ https://github.com/CleanCut/ultimate_rust_crash_course [Github repo for exercise
 
 * `Cargo` is a #package manager# for `Rust`. It is used to #search# for, #install# and manage packages that you want to use. It is also a #build system#, the #test runner#, and the #documentation generator#. Similar to _npn_, _pip_, and _make_.
 
-* If you want to quickly create a project called *hello*, you can use the following command: `$ cargo new hello`. When you do `$ tree --noreport hello`, you will notice that the project has been created successfully. A config file `Cargo.toml` and a sorce directory `src` with the RUST `main.rs` file.
+* If you want to create a project called *hello* quickly, you can use the following command: `$ cargo new hello`. When you do `$ tree --noreport hello`, you will notice that the project has been created successfully. A config file `Cargo.toml` and a sorce directory `src` with the RUST `main.rs` file.
 
 [plantuml, format=svg, opts="inline"]
 ----
@@ -1428,4 +1428,7 @@ fn print_sum(addend1: f64, addend2: f64) {
         addend1 + addend2);
 }
 ----
+
+* There is a difference between variable definition and function argument definition in that, for argument definition, type specification is required and does not rely on type inferencing. 
+
 
