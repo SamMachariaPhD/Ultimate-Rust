@@ -1431,4 +1431,17 @@ fn print_sum(addend1: f64, addend2: f64) {
 
 * There is a difference between variable definition and function argument definition in that, for argument definition, type specification is required and does not rely on type inferencing. 
 
+* When a value is passed in a function argument, the variable is not changed because only the value is passed. This is called __pass-by-value__ argument.
+
+[source, rust]
+----
+fn print_double(mut x: f64) {
+    x *= 2.;
+    print!("{}", x);
+}
+let x = 4.;
+print_double(x);
+print!(" {}", x);
+----
+
 
