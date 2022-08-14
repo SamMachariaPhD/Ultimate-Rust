@@ -1444,4 +1444,14 @@ print_double(x);
 print!(" {}", x);
 ----
 
+* The following functions are equal. 
+
+[source, rust]
+----
+fn f1(x: i32) {}
+fn f2(x: i32) -> () {}
+----
+
+* The value returned by the function must be of the same type as that of the function signature, or an unconstrained type that maybe returned to function type. 
+
 
