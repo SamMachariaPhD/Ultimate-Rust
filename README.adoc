@@ -1454,4 +1454,19 @@ fn f2(x: i32) -> () {}
 
 * The value returned by the function must be of the same type as that of the function signature, or an unconstrained type that maybe returned to function type. 
 
+[source, rust]
+----
+// valid return 
+fn _f1() -> i32 { 4.5; "abc"; 73i32 }
+fn _f2() -> i32 { 4.5; "abc"; 73 }
+fn _f3() -> i32 { 4.5; "abc"; 73 + 100 }
+// invalid return  
+fn _f1() -> i32 { 4.5; "abc"; false }
+fn _f2() -> i32 { 4.5; "abc"; () }
+fn _f3() -> i32 { 4.5; "abc"; {} }
+fn _f4() -> i32 { 4.5; "abc"; }
+----
+
+
+
 
