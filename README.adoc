@@ -1467,6 +1467,18 @@ fn _f3() -> i32 { 4.5; "abc"; {} }
 fn _f4() -> i32 { 4.5; "abc"; }
 ----
 
+* A function can be constructed to perform an early exit instead of waiting till the end of the body. This can be achieved by making use of __if__ statement. 
+
+[source, rust]
+----
+// early exit 
+fn f(x: f64) -> f64 {
+    if x <= 0. { return 0.; }
+    x + 3.
+}
+print!("{} {}", f(1.), f(-1.));
+---- 
+
 
 
 
