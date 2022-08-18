@@ -1490,6 +1490,17 @@ fn f(x: f64) -> f64 {
 print!("{} {}", f(1.), f(-1.));
 ---- 
 
+* The following program is a better implementation of the above program. The *return* is considered useful if it decreases the lines of code or identation in a program. The returned type must match or can be constrained to the declared type in the function. 
+
+[source, rust]
+----
+fn f(x: f64) -> f64 {
+    if x <= 0. { 0. }
+    else { x + 3. }
+}
+print!("{} {}", f(1.), f(-1.));
+----
+
 
 
 
