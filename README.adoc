@@ -1523,6 +1523,13 @@ fn divide(dividend: i32, divisor: i32) -> (i32, i32) {
 print!("{:?}", divide(50, 11));
 ----
 
+* You can return an enum, a struct, a tuple struct, an array, or a vector. 
+
+[source, rust]
+----
+
+----
+
 
 
 
