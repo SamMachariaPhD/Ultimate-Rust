@@ -1544,7 +1544,10 @@ print!("{} ", f4()[0]);
 print!("{} ", f5()[0]);
 ----
 
-* The *match f1()* does not match and it is taken to *-1*. 
+* From the above code, the *match f1()* does not match and it is taken to *-1*. 
+* *f2().a* returns a struct object containing the two fields, a and b. The content of field *a*, *49*, is extracted.
+ 
+
 
 
 
