@@ -1546,6 +1546,9 @@ print!("{} ", f5()[0]);
 
 * From the above code, the *match f1()* does not match and it is taken to *-1*. 
 * *f2().a* returns a struct object containing the two fields, a and b. The content of field *a*, *49*, is extracted.
+* *f3()* returns a tuple struct, *f4()* returns a vector, and *f5()* returns a vector. 
+
+
  
 
 
