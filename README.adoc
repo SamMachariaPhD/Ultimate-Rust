@@ -1556,7 +1556,24 @@ let mut arr = [5, -4, 9, 0, -7, -1, 3, 5, 3, 1];
 for n in 0..10 {
 arr[n] *= 2; }
 print!("{:?}", arr);
+// output: [10, -8, 18, 0, -14, -2, 6, 10, 6, 2] 
 ----
+
+* A possible function could be as follows.
+
+[source, rust]
+----
+fn double(mut a: [i32; 10]) {
+    for i in 0..10 {
+a[i] *= 2; }
+}
+let mut arr = [5, -4, 9, 0, -7, -1, 3, 5, 3, 1];
+double(arr);
+print!("{:?}", arr);
+----
+
+
+
 
 
  
