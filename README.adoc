@@ -1490,7 +1490,7 @@ fn f(x: f64) -> f64 {
 print!("{} {}", f(1.), f(-1.));
 ---- 
 
-* The following program is a better implementation of the above program. The *return* is considered useful if it decreases the lines of code or identation in a program. The returned type must match or can be constrained to the declared type in the function. 
+* The following program is a better implementation of the above program. The `return` is considered useful if it decreases the lines of code or identation in a program. The returned type must match or can be constrained to the declared type in the function. 
 
 [source, rust]
 ----
@@ -1544,9 +1544,9 @@ print!("{} ", f4()[0]);
 print!("{} ", f5()[0]);
 ----
 
-* From the above code, the *match f1()* does not match and it is taken to *-1*. 
-* *f2().a* returns a struct object containing the two fields, a and b. The content of field *a*, *49*, is extracted.
-* *f3()* returns a tuple struct, *f4()* returns a vector, and *f5()* returns a vector. 
+* From the above code, the `match f1()` does not match and it is taken to `-1`. 
+* `f2().a` returns a struct object containing the two fields, a and b. The content of field `a`, `49`, is extracted.
+* `f3()` returns a tuple struct, `f4()` returns a vector, and `f5()` returns a vector. 
 
 * Changing variable of the caller. 
 
