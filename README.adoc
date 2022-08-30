@@ -1585,6 +1585,7 @@ Double [2, 4, 6, 10, 18, 8, 4, 16, 10, 12]
 */
 ----
 
+* The above program works but does not use referencing. The array data is copied when the function is invoked and back to the original stack. This is computationally expensive. The following is a better function. 
 
 
 
