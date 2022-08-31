@@ -5,13 +5,24 @@ fn main() {
     //     ar[n] *= 2;
     // }
     // println!("{:?}", ar);
-    let arr = [1,2,3,5,9,4,2,8,5,6];
-    println!("Single {:?}\nDouble {:?}", arr, double(arr));
+    let mut arr = [1,2,3,5,9,4,2,8,5,6];
+    //println!("Single {:?}\nDouble {:?}\nEfficient{:?}", arr, double(arr), double2(&mut arr));
+    println!("Single {:?}", arr);
+    double2(&mut arr);
+    println!("Efficient {:?}", arr);
 }
 
-fn double(mut a:[i32;10]) -> [i32;10]{
-    for i in 0..a.len() {
-        a[i] *= 2;
+// fn double(mut a:[i32;10]) -> [i32;10]{
+//     for i in 0..a.len() {
+//         a[i] *= 2;
+//     }
+//     a
+// }
+
+// passing argument by referencing 
+
+fn double2(a: &mut [i32;10]){ // to do a.len() here, a would have to be a const 
+    for i in 0..a.len(){
+        (*a)[i] *= 2;
     }
-    a
 }

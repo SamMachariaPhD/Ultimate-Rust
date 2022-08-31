@@ -1585,10 +1585,17 @@ Double [2, 4, 6, 10, 18, 8, 4, 16, 10, 12]
 */
 ----
 
-* The above program works but does not use referencing. The array data is copied when the function is invoked and back to the original stack. This is computationally expensive. The following is a better function. 
+* The above program works but does not use referencing. The array data is copied when the function is invoked and back to the original stack. This is computationally expensive. The following is a more computationally effective function. 
 
-
-
+[source, rust]
+----
+// passing argument by referencing 
+fn double2(a: &mut [i32;10]){ 
+    for i in 0..a.len(){
+        (*a)[i] *= 2;
+    }
+}
+----
 
  
 
