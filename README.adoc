@@ -1597,7 +1597,9 @@ fn double2(a: &mut [i32;10]){
 }
 ----
 
- 
+* `&a` means the memory address of object `a`, and `*a` means the object that is present at the memory address `a`. `&mut [i32;10]` lets the function change the value of the referenced object. 
+
+
 
 
 
