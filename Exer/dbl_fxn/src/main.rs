@@ -23,6 +23,7 @@ fn main() {
 
 fn double2(a: &mut [i32;10]){ // to do a.len() here, a would have to be a const 
     for i in 0..a.len(){
-        (*a)[i] *= 2;
+        //(*a)[i] *= 2; // actually not required 
+        a[i] *= 2;
     }
 }

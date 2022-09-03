@@ -1599,7 +1599,11 @@ fn double2(a: &mut [i32;10]){
 
 * `&a` means the memory address of object `a`, and `*a` means the object that is present at the memory address `a`. `&mut [i32;10]` lets the function change the value of the referenced object. 
 
-* The interest is to handle the object reffered to by such object. The `*` symbol is used to access such object. The position of the object is at the address received in the function argument 
+* The interest is to handle the object reffered to by such object rather than the address. The `*` symbol is used to access such object. The position of the object is at the address received in the function argument.
+
+* The round brackets `()` are used because without them, the square brackets `[]` would take precidence over the star operator `*`. This would mean `*(a[i])` instead of the intended `(*a)[i]`.
+
+
 
 
 
