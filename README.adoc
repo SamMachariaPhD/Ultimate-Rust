@@ -1603,6 +1603,13 @@ fn double2(a: &mut [i32;10]){
 
 * The round brackets `()` are used because without them, the square brackets `[]` would take precidence over the star operator `*`. This would mean `*(a[i])` instead of the intended `(*a)[i]`.
 
+* Basic referencing:
+
+[source, rust]
+----
+let n = &&&5;
+println!("number = {}\nref to number = {}\nref to ref to number = {}\nref to ref to ref to number = {}", ***n, **n, *n, n);
+----
 
 
 
