@@ -15,9 +15,9 @@ fn main() {
     println!("***x = {}\n**x = {}\n*x = {}\nx = {}", ***x, **x, *x, x);
     /*
     output:
-    ***x = 5    the object referenced by "x" is obtained using the right most "*"
-    **x = 5     the object is a reference of reference
-    *x = 5      the object is a reference and it is taken using "*"
-    x = 5       the object is a number 5
+    ***x = 5    number
+    **x = 5     reference of a number
+    *x = 5      reference of a reference of a number 
+    x = 5       reference of a reference of a reference of a number
     */
 }
