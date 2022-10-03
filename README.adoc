@@ -1612,6 +1612,22 @@ println!("number = {}\nref to number = {}\nref to ref to number = {}\nref to ref
 ----
 
 
+== Useful Tricks 
+
+Using *dbg!()* macro instead of println!()
+
+Use the *dbg!()* macro instead of println!() when debugging. Less code, more useful information.
+
+[source, rust]
+====
+fn main() {
+    let var1 = 2;
+
+    println!("{}", 2); // Output: 2
+    dbg!(var1);        // Output: [src/main.rs:5] var1 = 2
+    dbg!(var1 * 2);    // Output: [src/main.rs:6] var1 * 2 = 4
+}
+====
 
 
 
